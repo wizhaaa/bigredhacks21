@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Presenter from "./Pages/HomeScroll";
+import Map from "./Pages/Map";
 
 const Routes = () => {
   return (
@@ -24,6 +25,10 @@ const Routes = () => {
         <Route exact path="/scroll">
           {" "}
           <Presenter />{" "}
+        </Route>
+        <Route exact path="/map">
+          {" "}
+          <Map />
         </Route>
       </Switch>
     </div>
