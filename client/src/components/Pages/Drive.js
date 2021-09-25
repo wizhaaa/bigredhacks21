@@ -46,53 +46,109 @@ function Drive(props) {
   //     setDriveVideoResponse(response);
   //     setIsLoading(false);
   // });
+  let hardcodedAmbientID = "fh3EdeGNKus";
+
   let hardcodedID = "";
   let hardcodedPlaylistID = "";
-  let hardcodedAmbientID = "fh3EdeGNKus";
+
   if (cityName === "shanghai") {
     hardcodedID = "o0q00XhqUK8";
-    hardcodedPlaylistID = "bCaYBakJwEQ";
+    hardcodedPlaylistID = "FUhJrjQHwUY";
+  }
+  if (cityName === "seoul") {
+    hardcodedID = "d7SHqhQ82OQ";
+    hardcodedPlaylistID = "rGtnDBqxvaI";
+  }
+  if (cityName === "tokyo") {
+    hardcodedID = "p7l6JQApzak";
+    hardcodedPlaylistID = "UZ7oOhhPEWU";
+  }
+  if (cityName === "newyork") {
+    hardcodedID = "7HaJArMDKgI";
+    hardcodedPlaylistID = "_sI_Ps7JSEk";
+  }
+  if (cityName === "sanfrancisco") {
+    hardcodedID = "PGMu_Z89Ao8";
+    hardcodedPlaylistID = "kSNVlmP65GI";
+  }
+  if (cityName === "chongqing") {
+    hardcodedID = "T8COEmwmjkw";
+    hardcodedPlaylistID = "QARz7ggiImI";
+  }
+  if (cityName === "delhi") {
+    hardcodedID = "_UlKnvXKUWE";
+    hardcodedPlaylistID = "3GI_uE4SxSU";
+  }
+  if (cityName === "cairo") {
+    hardcodedID = "86pZTI5gJQM";
+    hardcodedPlaylistID = "T2rNJcLmuEA";
+  }
+  if (cityName === "mexicocity") {
+    hardcodedID = "fR7jnwIovEw";
+    hardcodedPlaylistID = "ZrR68Ons4jI";
+  }
+  if (cityName === "london") {
+    hardcodedID = "QI4_dGvZ5yE";
+    hardcodedPlaylistID = "VmOOv6rVC20";
+  }
+  if (cityName === "chicago") {
+    hardcodedID = "x42Wxn1btTY";
+    hardcodedPlaylistID = "BJzmJxLncO4";
+  }
+  if (cityName === "paris") {
+    hardcodedID = "FBjjYw-xcdg";
+    hardcodedPlaylistID = "tkjlYxUf4-M";
+  }
+  if (cityName === "dubai") {
+    hardcodedID = "TE2tfavIo3E";
+    hardcodedPlaylistID = "FJ6UtVkBN80";
+  }
+  if (cityName === "lagos") {
+    hardcodedID = "BxcVPzP8cWc";
+    hardcodedPlaylistID = "v8azffiFg5w";
+  }
+  if (cityName === "taipei") {
+    hardcodedID = "o0q00XhqUK8";
+    hardcodedPlaylistID = "6_73l00N9rM";
   }
 
   return (
     <>
-      <div className="no-overflow" style={{ overflow: "hidden" }}>
-        <VideoTile
-          vidid={hardcodedID}
-          width={size.width + 100}
-          height={size.height}
-          visible={true}
-          muted={true}
-        />
-        <LoadOverlay
-          cityName={cityName}
-          visible={!isLoading}
-          width={size.width + 100}
-          height={size.height}
-        />
-        <ControlOverlay
-          setIsDarkMode={setIsDarkMode}
-          isDarkMode={isDarkMode}
-          toggleAmbience={toggleAmbience}
-          toggleMusic={toggleMusic}
-          ambienceOn={playAmbience}
-          musicOn={playMusic}
-        />
-        <VideoTile
-          vidid={hardcodedAmbientID}
-          width={1}
-          height={1}
-          visible={false}
-          muted={playAmbience}
-        />
-        <VideoTile
-          vidid={hardcodedPlaylistID}
-          width={1}
-          height={1}
-          visible={false}
-          muted={playMusic}
-        />
-      </div>
+      <VideoTile
+        vidid={hardcodedID}
+        width={size.width + 100}
+        height={size.height}
+        visible={true}
+        muted={true}
+      />
+      <LoadOverlay
+        cityName={cityName}
+        visible={!isLoading}
+        width={size.width + 100}
+        height={size.height}
+      />
+      <ControlOverlay
+        setIsDarkMode={setIsDarkMode}
+        isDarkMode={isDarkMode}
+        toggleAmbience={toggleAmbience}
+        toggleMusic={toggleMusic}
+        ambienceOn={playAmbience}
+        musicOn={playMusic}
+      />
+      <VideoTile
+        vidid={hardcodedAmbientID}
+        width={1}
+        height={1}
+        visible={false}
+        muted={playAmbience}
+      />
+      <VideoTile
+        vidid={hardcodedPlaylistID}
+        width={1}
+        height={1}
+        visible={false}
+        muted={playMusic}
+      />
     </>
   );
 }
@@ -175,7 +231,7 @@ function YouTube(props) {
   var src =
     "https://www.youtube.com/embed/" +
     props.videoId +
-    "?autoplay=1&rel=0&controls=0&mute=" +
+    "?start=100&autoplay=1&rel=0&controls=0&mute=" +
     (props.muted ? 1 : 0) +
     "&start=" +
     props.opts.playerVars.start +
