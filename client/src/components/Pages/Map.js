@@ -33,60 +33,101 @@ const newCenter = {
 function MapComponent(props) {
   const locations = [
     {
-      name: "anchorage",
-      text_name: "anchorage",
+      name: "seoul",
       location: {
-        lat: 61.1083688,
-        lng: -150.0006932,
+        lat: 37.5636203,
+        lng: 126.4136405,
       },
     },
     {
-      name: "valencia",
+      name: "tokyo",
       location: {
-        lat: 39.4749771,
-        lng: -0.3999656,
+        lat: 35.4928439,
+        lng: 137.5207362,
       },
     },
     {
-      name: "sacramento",
+      name: "newyork",
       location: {
-        lat: 38.5901974,
-        lng: -121.284071,
+        lat: 40.7164064,
+        lng: -74.1620723,
       },
     },
     {
-      name: "brisbane",
+      name: "sanfrancisco",
       location: {
-        lat: -27.3818631,
-        lng: 152.7130055,
+        lat: 37.7723053,
+        lng: -122.4612352,
       },
     },
     {
-      name: "brasilia",
+      name: "chongqing",
       location: {
-        lat: -15.7750656,
-        lng: -48.0773077,
+        lat: 29.5546171,
+        lng: 106.2676765,
       },
     },
     {
-      name: "nairobi",
+      name: "delhi",
       location: {
-        lat: -1.3028618,
-        lng: 36.7073108,
+        lat: 28.6466758,
+        lng: 76.8123858,
       },
     },
     {
-      name: "kathmandu",
+      name: "cairo",
       location: {
-        lat: 27.7137312,
-        lng: 85.2796358,
+        lat: 30.0594838,
+        lng: 31.223359,
       },
     },
     {
-      name: "shanghai",
+      name: "mexicocity",
       location: {
-        lat: 31.2321265,
-        lng: 121.4716187,
+        lat: 19.3906797,
+        lng: -99.2840423,
+      },
+    },
+    {
+      name: "london",
+      location: {
+        lat: 51.5283063,
+        lng: -0.3824635,
+      },
+    },
+    {
+      name: "chicago",
+      location: {
+        lat: 41.8333908,
+        lng: -88.0128349,
+      },
+    },
+    {
+      name: "paris",
+      location: {
+        lat: 48.8588335,
+        lng: 2.2768237,
+      },
+    },
+    {
+      name: "dubai",
+      location: {
+        lat: 25.0757582,
+        lng: 54.9468678,
+      },
+    },
+    {
+      name: "lagos",
+      location: {
+        lat: 6.5480356,
+        lng: 3.1435293,
+      },
+    },
+    {
+      name: "taipei",
+      location: {
+        lat: 25.08534,
+        lng: 121.421072,
       },
     },
   ];
