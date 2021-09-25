@@ -5,6 +5,7 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Presenter from "./Pages/HomeScroll";
 import Map from "./Pages/Map";
+import Drive from "./Pages/Drive";
 
 const Routes = () => {
   return (
@@ -29,6 +30,10 @@ const Routes = () => {
         <Route exact path="/map">
           {" "}
           <Map />
+        </Route>
+        <Route exact path="/drive">
+          {" "}
+          <Drive />
         </Route>
       </Switch>
     </div>
