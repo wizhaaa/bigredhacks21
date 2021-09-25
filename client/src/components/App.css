@@ -31,6 +31,29 @@
   color: #61dafb;
 }
 
+.links { 
+  color:#61dafb;
+  
+}
+
+.header-div { 
+  padding: 30% 0;
+}
+
+.scroll-page-one { 
+  position: fixed;
+  bottom: 20px;
+}
+
+.scroll-down {
+  position: fixed;
+  
+  bottom: 10px;
+}
+
+
+/* animations */
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -42,7 +65,7 @@
 
 
 /* make text blinking */
-.blink_me {
+.blink-me {
   animation: blinker 2.7s linear infinite;
 }
 
@@ -55,14 +78,13 @@
 /* text fade in */
 .fadein {
   margin-top: 25px;
-  font-size: 21px;
   text-align: center;
 
-  -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadein 4s; /* Firefox < 16 */
-      -ms-animation: fadein 4s; /* Internet Explorer */
-       -o-animation: fadein 4s; /* Opera < 12.1 */
-          animation: fadein 4s;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 2s; /* Firefox < 16 */
+      -ms-animation: fadein 2s; /* Internet Explorer */
+       -o-animation: fadein 2s; /* Opera < 12.1 */
+          animation: fadein 2s;
 }
 
 @keyframes fadein {
