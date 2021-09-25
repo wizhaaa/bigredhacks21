@@ -7,6 +7,7 @@ function Home() {
       Home
       <span class="blink_me"> Exploration.. </span>
       <div class="fadein"> fading in</div>
+      <div class="blinking-cursor"> | hi </div>
     </div>
   );
 }

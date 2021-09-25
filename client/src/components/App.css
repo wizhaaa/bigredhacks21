@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  margin:0;
+  padding:0;
+
 }
 
 .App-logo {
@@ -94,7 +97,7 @@
 .blinking-cursor {
   font-weight: 100;
   font-size: 30px;
-  color: #2E3D48;
+  /* color: #2E3D48; */
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;
   -ms-animation: 1s blink step-end infinite;
@@ -102,12 +105,12 @@
   animation: 1s blink step-end infinite;
 }
 
-@keyframes "blink" {
+@keyframes blink {
   from, to {
     color: transparent;
   }
   50% {
-    color: black;
+    color: white;
   }
 }
 
@@ -120,7 +123,7 @@
   }
 }
 
-@-webkit-keyframes "blink" {
+@-webkit-keyframes blink {
   from, to {
     color: transparent;
   }
@@ -129,7 +132,7 @@
   }
 }
 
-@-ms-keyframes "blink" {
+@-ms-keyframes blink {
   from, to {
     color: transparent;
   }
@@ -138,7 +141,7 @@
   }
 }
 
-@-o-keyframes "blink" {
+@-o-keyframes blink {
   from, to {
     color: transparent;
   }
