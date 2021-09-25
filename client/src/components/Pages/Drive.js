@@ -28,7 +28,7 @@ function Drive(props) {
 
   setTimeout(() => {
     setIsLoading(true);
-  }, 5000);
+  }, 7000);
 
   const size = useWindowSize();
 
@@ -50,6 +50,8 @@ function Drive(props) {
 
   let hardcodedID = "";
   let hardcodedPlaylistID = "";
+
+  document.body.style.overflow = "hidden";
 
   if (cityName === "shanghai") {
     hardcodedID = "o0q00XhqUK8";
@@ -194,7 +196,7 @@ function LoadOverlay(props) {
         height: props.height,
       }}
     >
-      <div id="teleportationnotice">Teleporting to {props.cityName}</div>
+      <div id="teleportationnotice">teleporting to {props.cityName}...</div>
     </div>
   );
 }

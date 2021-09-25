@@ -25,18 +25,16 @@ const Presenter = () => {
   const FadeUp = batch(Fade(), Move(), Sticky());
   const pageOneAni = batch(Fade(), Sticky(), MoveOut(0, -200));
 
+  document.body.style.overflow = "default";
+
   return (
     <ScrollContainer>
       <ScrollPage page={0}>
         <Animator animation={MoveIn}>
+          <br /><br /><br /><br /><br />
           <span style={{ fontSize: "3em" }}>DayTrip </span>
-          <br />
+          <br /><br />
           <div>
-            <div style={{ padding: "10%" }} className="fadein">
-              {" "}
-              Scroll 👀 ... or{" "}
-            </div>
-
             <Link to="map">
               <Fab variant="extended">
                 <PlayArrowIcon sx={{ mr: 1 }} /> begin now{" "}

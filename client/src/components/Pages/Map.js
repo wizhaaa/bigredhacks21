@@ -40,6 +40,13 @@ function MapComponent(props) {
       },
     },
     {
+      name: "shanghai",
+      location: {
+        lat: 31.2231338,
+        lng: 120.9162975,
+      },
+    },
+    {
       name: "tokyo",
       location: {
         lat: 35.4928439,
