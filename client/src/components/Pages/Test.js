@@ -12,6 +12,10 @@ const containerStyle = {
     overflow: "hidden",
 };
 
+const headingStyle = {
+    marginTop: "5px"
+}
+
 const center = {
     lat: 29.3269589,
     lng: 52.5600516,
@@ -22,6 +26,7 @@ const newCenter = {
 };
 
 function MapComponent(props) {
+  
   const locations = [
     {
       name: "anchorage",
@@ -72,35 +77,41 @@ function MapComponent(props) {
         lat: 27.7137312,
         lng: 85.2796358
       },
+    },
+    {
+      name: "shanghai",
+      location: { 
+        lat: 31.2321265,
+        lng: 121.4716187
+      },
     }
-
+  
   ];
   return (
-  
-    <LoadScript
+    <><div>
+      <h1 style={headingStyle}>
+        Daytrip
+      </h1>
+    </div><LoadScript
       googleMapsApiKey="AIzaSyCw7YrWr46oZjrbCuXqWhhamYIjoVis3BE"
-      
+
     >
-      <GoogleMap
+        <GoogleMap
           mapContainerStyle={containerStyle}
           zoom={3}
           center={center}>
-            
-         {
-            locations.map(item => {
-              return (
+
+          {locations.map(item => {
+            return (
               <Marker key={item.name} position={item.location}
-              onClick={() => {
-                
-                window.open("/drive#" + item.name)
-              }}
-              />    
-              )
-            })
-            
-         }
-     </GoogleMap>
-    </LoadScript>
+                onClick={() => {
+
+                  window.open("/drive#" + item.name);
+                } } />
+            );
+          })}
+        </GoogleMap>
+      </LoadScript></>
   )
 }
 
