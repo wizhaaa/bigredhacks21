@@ -14,10 +14,9 @@ import {
   ZoomIn,
 } from "react-scroll-motion";
 
-// import Link from "@mui/material/Link";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import { IconButton, Fab } from "@mui/material";
+import { Fab } from "@mui/material";
 
 import { Link } from "react-router-dom";
 
