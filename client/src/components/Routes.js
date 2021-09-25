@@ -21,7 +21,7 @@ const Routes = () => {
           {" "}
           <About />{" "}
         </Route>
-        <Route exact path="/test">
+        <Route exact path="/map">
           {" "}
           <Test />{" "}
         </Route>
