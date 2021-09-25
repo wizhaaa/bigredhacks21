@@ -1,13 +1,11 @@
 import React, { useState } from "react";
+import Link from "react-router-dom";
+import HomeScroll from "./HomeScroll";
 
 function Home() {
   return (
     <div>
-      {" "}
-      Home
-      <span class="blink_me"> Exploration.. </span>
-      <div class="fadein"> fading in</div>
-      <div class="blinking-cursor"> | hi </div>
+      <HomeScroll />
     </div>
   );
 }

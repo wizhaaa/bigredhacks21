@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Home from "./Pages/Home";
 import About from "./Pages/About";
+import Presenter from "./Pages/HomeScroll";
 
 const Routes = () => {
   return (
@@ -19,6 +20,10 @@ const Routes = () => {
         <Route exact path="/about">
           {" "}
           <About />{" "}
+        </Route>
+        <Route exact path="/scroll">
+          {" "}
+          <Presenter />{" "}
         </Route>
       </Switch>
     </div>
