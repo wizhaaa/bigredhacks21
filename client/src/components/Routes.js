@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Test from "./Pages/Test";
+import Drive from "./Pages/Drive";
 
 const Routes = () => {
   return (
@@ -24,6 +25,8 @@ const Routes = () => {
         <Route exact path="/test">
           {" "}
           <Test />{" "}
+        </Route>
+        <Route exact path="/drive" component={Drive}>
         </Route>
       </Switch>
     </div>

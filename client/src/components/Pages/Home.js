@@ -1,12 +1,21 @@
 import React, { useState } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function Home() {
+
   return (
     <div>
       {" "}
-      Home
+      <Link to={"/drive#" + "Shanghai"}> Go Driving </Link>
       <span class="blink_me"> Exploration.. </span>
-      <div class="fadein"> fading in</div>
+      <span id="left"><div class="fadein"> fading in</div></span>
+
+      
     </div>
   );
 }
