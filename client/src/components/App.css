@@ -65,7 +65,7 @@
 
 
 /* make text blinking */
-.blink-me {
+.blink_me {
   animation: blinker 2.7s linear infinite;
 }
 
@@ -78,13 +78,14 @@
 /* text fade in */
 .fadein {
   margin-top: 25px;
+  font-size: 21px;
   text-align: center;
 
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadein 2s; /* Firefox < 16 */
-      -ms-animation: fadein 2s; /* Internet Explorer */
-       -o-animation: fadein 2s; /* Opera < 12.1 */
-          animation: fadein 2s;
+  -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 4s; /* Firefox < 16 */
+      -ms-animation: fadein 4s; /* Internet Explorer */
+       -o-animation: fadein 4s; /* Opera < 12.1 */
+          animation: fadein 4s;
 }
 
 @keyframes fadein {
@@ -171,3 +172,60 @@
     color: black;
   }
 }
+
+/*About-page formatting*/
+.text{
+  box-sizing: border-box;
+  width: 500px;
+  padding: 25px;
+}
+
+.border-rounded{
+  
+}
+
+/* .showcase{
+  position: absolute;
+  right:0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  color: white;
+  z-index: 2;
+}
+
+.showcase header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+}
+
+.showcase video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.text{
+  position: relative;
+  z-index: 10;
+} */
