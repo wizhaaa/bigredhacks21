@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import $ from "jquery";
 import DarkModeToggle from "react-dark-mode-toggle";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {Helmet} from "react-helmet";
 
 //pass in the following:
 //props.cityName --> the city name
@@ -11,12 +12,17 @@ function Drive(props) {
   const [playMusic, setPlayMusic] = useState(true);
   const [timeOfDay, setTimeOfDay] = useState(true); //true means daytime, false means nighttime
   const [driveVideoResponse, setDriveVideoResponse] = useState(null);
+  const [showInfo, setShowInfo] = useState(true);
   const [cityName, setCityName] = useState(
     (window.location.href + "").substring(
       (window.location.href + "").lastIndexOf("#") + 1
     )
   ); //hash should contain city name. set into state
   const [isDarkMode, setIsDarkMode] = useState(false);
+
+  function toggleAbout() {
+    setShowInfo(!showInfo);
+  }
 
   function toggleAmbience() {
     setPlayAmbience(!playAmbience);
@@ -116,6 +122,9 @@ function Drive(props) {
 
   return (
     <>
+    <Helmet>
+      <meta name="monetization" content="$ilp.uphold.com/ZfYmX86jEPy3" />
+    </Helmet>
       <VideoTile
         vidid={hardcodedID}
         width={size.width + 100}
@@ -136,6 +145,8 @@ function Drive(props) {
         toggleMusic={toggleMusic}
         ambienceOn={playAmbience}
         musicOn={playMusic}
+        infoOn={showInfo}
+        toggleAbout={toggleAbout}
       />
       <VideoTile
         vidid={hardcodedAmbientID}
@@ -167,6 +178,13 @@ function ControlOverlay(props) {
         </div>
       </div>
       <div className="rightside">
+        <div
+          className="controlelement"
+          id="localradio"
+          onClick={props.toggleAbout}
+        >
+          About
+        </div>
         <div
           className="controlelement"
           id="localradio"

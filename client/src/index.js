@@ -11,7 +11,7 @@ import {
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router basename="/bigredhacks21">
+    <Router>
     <App />
     </Router>
   </React.StrictMode>,

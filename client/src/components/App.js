@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Router basename="/bigredhacks21">
+        <Router>
           <Routes></Routes>
         </Router>
       </header>
