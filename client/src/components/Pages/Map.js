@@ -6,6 +6,9 @@ import {
   Marker,
   InfoWindow,
 } from "@react-google-maps/api";
+import { Link } from "react-router-dom";
+import { Redirect } from "react-router";
+
 // https://medium.com/@allynak/how-to-use-google-map-api-in-react-app-edb59f64ac9d
 //https://developers.google.com/maps/documentation/javascript/examples/marker-simple
 const containerStyle = {
@@ -144,9 +147,12 @@ function MapComponent(props) {
                 key={item.name}
                 position={item.location}
                 onClick={() => {
-                  window.open("/drive#" + item.name);
+                  window.location = "/drive#" + item.name;
+                  return <Redirect to={"/drive#" + item.name} />;
                 }}
-              />
+              >
+                {" "}
+              </Marker>
             );
           })}
         </GoogleMap>

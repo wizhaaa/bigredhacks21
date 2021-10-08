@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import $ from "jquery";
 import DarkModeToggle from "react-dark-mode-toggle";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 //pass in the following:
 //props.cityName --> the city name
